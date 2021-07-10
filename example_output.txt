@@ -1,0 +1,44 @@
+------------------------------------------------------------
+-# PostgreSQL connection & transaction is ACTIVE
+
+-# INSERT INTO "cities" ("city", "address") VALUES (fayoum, south of cairo);
+
+-# INSERT INTO "cities" ("city", "address") VALUES (matrooh, north);
+
+-# INSERT INTO "cities" ("city", "address") VALUES (luxor, south);
+
+-# COMMIT 3 changes
+
+-# SELECT * FROM "cities";
+
+-# [('fayoum', 'south of cairo'), ('matrooh', 'north'), ('luxor', 'south')]
+
+-# SELECT * FROM "cities" WHERE "city" = luxor;
+
+-# [('luxor', 'south')]
+
+-# SELECT "address" FROM "cities" WHERE "city" = luxor;
+
+-# [('south',)]
+
+-# SELECT "address" FROM "cities";
+
+-# [('south of cairo',), ('north',), ('south',)]
+
+-# UPDATE "cities" SET "address" = 50 KM south of cairo WHERE "city" = fayoum;
+
+-# UPDATE "cities" SET ("city","address") = (qena, upperEgypt) WHERE "city" = luxor;
+
+-# DELETE FROM "cities" WHERE "city" = matrooh;
+
+-# SELECT * FROM "cities";
+
+-# [('fayoum', '50 KM south of cairo'), ('qena', 'upperEgypt')]
+
+-# DELETE FROM "cities";
+
+-# COMMIT 4 changes
+
+-# CLOSE connection
+------------------------------------------------------------
+
